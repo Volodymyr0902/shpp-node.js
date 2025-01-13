@@ -4,12 +4,13 @@
   "description": "Getting started with express",
   "main": "express-tester.js",
   "scripts": {
-    "test": "introtest"
+    "test": "nodemon express-tester.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2",
-    "express-generator": "^4.16.1"
+    "express-generator": "^4.16.1",
+    "nodemon": "^3.1.9"
   }
 }

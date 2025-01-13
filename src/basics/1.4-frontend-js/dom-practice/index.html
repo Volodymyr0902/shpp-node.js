@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM practice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="square-black" class="square-black"></div>
+  <button onclick="removeWithCSS()">Remove with CSS!</button>
+  <button onclick="removeWithJS()">Remove with JS!</button>
+  <button onclick="removeWithCSSnJS()">Remove with CSS and JS!</button>
+  <button onclick="removeOrAdd()">Remove or add!</button>
+
+  <div id="squares-wrapper">
+    <div class="square-black"></div>
+    <div class="square-black"></div>
+    <div class="square-black"></div>
+    <div class="square-black"></div>
+    <div class="square-black"></div>
+  </div>
+  <button onclick="removeOrAddAll()">Remove or add all of them!</button>
+
+  <label for="selector">Type a selector to make matching elements gone or add them!</label>
+  <input type="text" name="selector" id="selector">
+  <button onclick="manipulateWithSelector()">Remove or add matches!</button>
+
+  <div id="yellow-square"></div>
+
+  <button id="red-square-controls">Mouse on me to manipulate the red square!</button>
+  <div id="red-square"></div>
+
+  <label for="green-input">Type to make green rectangle gone!</label>
+  <input type="text" name="green-input" id="green-input">
+  <div id="green-rect"></div>
+
+  <div id="img-getter-wrapper">
+    <label for="img-input">Type image URL</label>
+    <textarea name="img-input" id="img-input"></textarea>
+    <button id="img-getter" style="display: inline-block;">Load image!</button>
+  </div>
+
+  <div id="corner-data">
+    <p>X: <span id="cursor-x"></span>, Y: <span id="cursor-y"></span></p>
+    <p>Client language: <span id="client-lang"></span></p>
+    <p>Latitude: <span id="latitude"></span>, longitude: <span id="longitude"></span></p>
+  </div>
+
+  <div id="saved-data">
+    <div id="input-local-storage" contenteditable="true"></div>
+    <div id="input-cookies" contenteditable="true"></div>
+    <div id="input-session-storage" contenteditable="true"></div>
+  </div>
+
+  <button id="to-top-button">Top!</button>
+
+  <div id="outer-div">
+    <div id="inner-div"></div>
+  </div>
+  
+  <button id="fade-button">Click me to see faded screen!</button>
+  <div id="fade-block"></div>
+
+  <form id="ban-reload">
+    <input type="submit" value="GO">
+  </form>
+
+  <div id="file-input">
+    <p id="header-input">Drag and drop your files here!</p>
+    <p id="info-input">No file selected</p>
+    <input type="file" name="drag" id="drag">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

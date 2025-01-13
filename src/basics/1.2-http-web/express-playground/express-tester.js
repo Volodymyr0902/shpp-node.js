@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
   var obj = Object.values(query)
   sum = obj.reduce((accum, num) => accum + +num, 0)
   res.status(200).type('text/plain');
-  res.send(`${sum}`)
+  res.send(`Sum: ${sum}`)
 })
 
 app.get('/home', (req, res) => {
