@@ -61,3 +61,4 @@ Temporary Items
 /src/basics/1.2-http-web/counter/node_modules/
 /src/basics/1.2-http-web/express-playground/node_modules
 /src/basics/1.4-frontend-js/fetch-playground/server/node_modules
+/src/primitive-servers/2.2-asynchronous/node_modules
