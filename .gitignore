@@ -62,3 +62,5 @@ Temporary Items
 /src/basics/1.2-http-web/express-playground/node_modules
 /src/basics/1.4-frontend-js/fetch-playground/server/node_modules
 /src/primitive-servers/2.2-asynchronous/node_modules
+/src/primitive-servers/2.3-http-tcp-udp/node_modules
+/src/primitive-servers/2.4-rest-mongo/node_modules

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Person</title>
+  </head>
+  <body>
+    <h1>Person data</h1>
+
+    <%- include("./partials/nav.ejs")%>
+
+    <h2>Name: <%= user.name%>, <%= user.age%> y.o.</h2>
+    <p>Position: <%= user.position%></p>
+
+    <button id="delete" data-uid="<%= user._id%>">Delete user</button>
+
+    <script>
+      const delButton = document.getElementById("delete");
+      const uri = `/person/${delButton.dataset.uid}`;
+
+      delButton.addEventListener("click", () => {
+        fetch(uri, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => window.location.href = data.redirect)
+          .catch((err) => console.error(err));
+      });
+    </script>
+  </body>
+</html>

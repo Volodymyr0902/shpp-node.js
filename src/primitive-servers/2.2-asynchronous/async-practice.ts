@@ -1,6 +1,6 @@
 import fetch, { Response } from "node-fetch";
 
-//-------------TASK1-------------//
+//-------------TASK-1-------------//
 
 interface IPRes {
   ip: string;
@@ -11,7 +11,7 @@ const data = (await res.json()) as IPRes;
 
 console.log(`1. await IP: ${data.ip}\n`);
 
-//----------TASK-2-----------//
+// //----------TASK-2-----------//
 
 async function getMyIP(): Promise<string> {
   const res: Response = await fetch("https://api.ipify.org?format=json");
@@ -157,3 +157,136 @@ function getNames3(): Promise<string[]> {
 getNames3()
   .then((data) => console.log(`3.C. Names: ${data}\n`))
   .catch((err) => `Error: ${err}`);
+
+//-----------TASK-4-A-------------//
+
+const link2 = "https://random-data-api.com/api/users/random_user";
+
+interface PersonWithGender {
+  gender: string;
+}
+
+function isWoman(data: any): data is PersonWithGender {
+  return (
+    typeof data === "object" &&
+    data !== null &&
+    "gender" in data &&
+    data.gender === "Female"
+  );
+}
+
+function requestSuccess3(): Promise<Response> {
+  return fetch(link2)
+    .then((res) => {
+      if (res.ok) {
+        return res;
+      } else if (res.status === 429) {
+        return requestSuccess3();
+      } else {
+        throw new Error(`Failed to fetch: ${res.status}`);
+      }
+    })
+    .catch((err) => Promise.reject(err));
+}
+
+function getFemaleUser(reqsCounter = 0): Promise<PersonWithGender> {
+  return requestSuccess3()
+    .then((res) => res.json())
+    .then((person) => {
+      if (isWoman(person)) {
+        console.log(`4.A. Took ${reqsCounter} requests to get female user`);
+        return person;
+      } else {
+        return getFemaleUser(++reqsCounter);
+      }
+    })
+    .catch((err) => Promise.reject(err));
+}
+
+getFemaleUser()
+  .then((person) => console.log(`${person.gender}\n`))
+  .catch((err) => console.log(err));
+
+//----------TASK-4-B------------//
+
+async function requestSuccess4(): Promise<Response> {
+  let res: Response;
+  do {
+    res = await fetch(link2);
+    if (res.status !== 429 && res.status !== 200) {
+      Promise.reject(`Failed to fetch: ${res.status}`);
+    }
+  } while (!res.ok);
+
+  return res;
+}
+
+async function getFemaleUser2(reqsCounter = 0): Promise<PersonWithGender> {
+  try {
+    const person = await requestSuccess4().then((res) => res.json());
+    if (isWoman(person)) {
+      console.log(`4.B. Took ${reqsCounter} requests to get female user`);
+      return person;
+    } else {
+      return getFemaleUser2(++reqsCounter);
+    }
+  } catch (error) {
+    throw new Error(`Error: ${error}`);
+  }
+}
+
+getFemaleUser2()
+  .then((person) => console.log(`${person.gender}\n`))
+  .catch((err) => console.log(err));
+
+//------------TASK-5---------------//
+
+async function getIP(): Promise<string> {
+  try {
+    const res: Response = await fetch("https://api.ipify.org?format=json");
+    const data = (await res.json()) as IPRes;
+    return data.ip;
+  } catch (error) {
+    throw new Error(`Failed to fetch: ${error}`);
+  }
+}
+
+async function fun1(callbackfn: (ip: string) => string): Promise<string> {
+  try {
+    const ip: string = await getIP();
+    return callbackfn(ip);
+  } catch (error) {
+    throw new Error(`Failed to fetch: ${error}`);
+  }
+}
+
+function fun2(): Promise<string> {
+  return fun1((ip) => `5. IP: ${ip}\n`);
+}
+
+const result: string = await fun2();
+console.log(result);
+
+//-------------TASK-6--------------//
+
+async function fn3(): Promise<string> {
+  try {
+    const ip: string = await getIP();
+    return ip;
+  } catch (error) {
+    throw new Error(`Failed to fetch: ${error}`);
+  }
+}
+
+async function fn4(callbackfn: (ip: string) => string) {
+  try {
+    const res: string = await fn3();
+    return callbackfn(res);
+  } catch (error) {
+    throw new Error(`Failed to fetch: ${error}`);
+  }
+}
+
+fn4((ip) => `6. IP: ${ip}`)
+  .then((ip) => console.log(`${ip}\n`))
+  .catch((err) => console.log(err));

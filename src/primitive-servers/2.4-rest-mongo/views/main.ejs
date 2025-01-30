@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main</title>
+</head>
+<body>
+  <h1>Hello everyone</h1>
+  <p><%=inner%></p>
+
+  <%- include("./partials/nav.ejs")%>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Suscipit adipisci reiciendis natus inventore repudiandae fuga quae nesciunt, soluta aliquam 
+    libero ad harum optio quasi. Culpa porro sit animi quidem inventore.
+  </p>
+
+  <button id="down-file">Download file</button>
+
+  <% if (users?.length > 0) { %>
+    <h3>Persons:</h3>
+    <% users.forEach(item => { %>
+      <a href="/person/<%= item._id%>">
+        <h3><%= `${item.name}: ${item.age}` %></h3>
+      </a>
+    <% }) %>  
+  <% } else { %>
+    <h3>No persons found.</h3>
+  <% } %>
+
+  <script>
+    const downFile = document.getElementById("down-file");
+
+    downFile.addEventListener("click", () => {
+      window.location.href = "/random-text";
+    })
+  </script>
+</body>
+</html>
