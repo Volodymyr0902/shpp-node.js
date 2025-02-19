@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "67a3608365a39fce18e5274a"
+  },
+  "login": "vova",
+  "pass": "$2b$10$KNt2yCLLnYzQ6KsmnxCCturJZgFT8njXlowr39p9enbd5v/sO//Xe"
+},
+{
+  "_id": {
+    "$oid": "67a377be7b959dea057b4f65"
+  },
+  "login": "peter",
+  "pass": "$2b$10$r1mqSaMqMBcGke5kDF0tKeXbdiejHSE4gEU2VWoP2qjm0NkKC5ohy"
+},
+{
+  "_id": {
+    "$oid": "67a4d50da817bebfd3056e78"
+  },
+  "login": "serj",
+  "pass": "$2b$10$R3SDBOAMR6wKdWA2Kzs1N.SCOZZDImEKmMV/9Txv7gVOvdFeraehq"
+}]

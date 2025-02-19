@@ -5,6 +5,7 @@ import cookie from "cookie-parser";
 import { router } from "./routes/super-router.js";
 import mongoose from "mongoose";
 import { ActiveUser } from "./models/user.js";
+import errorHandler from "errorhandler";
 const port = 5353;
 const dbURI = "mongodb+srv://admin:todosproject@todo.i2ft2.mongodb.net/Users?retryWrites=true&w=majority&appName=TODO";
 const app = express();
@@ -123,6 +124,7 @@ app.delete("/person/:id", (req, res) => {
     })
         .catch((err) => console.error(`Failed to delete person: ${err}`));
 });
+// Download
 app.get("/random-text", (req, res) => {
     res.download("public/to-be-got.txt", (err) => {
         if (err) {
@@ -133,6 +135,7 @@ app.get("/random-text", (req, res) => {
         }
     });
 });
+app.use(errorHandler());
 // Handle errors
 // app.use((err, req, res, next) => {
 //   console.error(err)

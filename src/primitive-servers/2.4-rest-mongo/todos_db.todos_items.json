@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "67a377917b959dea057b4f63"
+  },
+  "text": "попилососити",
+  "checked": true,
+  "userID": "67a3608365a39fce18e5274a"
+},
+{
+  "_id": {
+    "$oid": "67a377d47b959dea057b4f66"
+  },
+  "text": "піти в магазин",
+  "checked": true,
+  "userID": "67a377be7b959dea057b4f65"
+},
+{
+  "_id": {
+    "$oid": "67a377e57b959dea057b4f67"
+  },
+  "text": "зробити домашку",
+  "checked": true,
+  "userID": "67a377be7b959dea057b4f65"
+},
+{
+  "_id": {
+    "$oid": "67a4d29bb98d90e00300e846"
+  },
+  "text": "вивчити sql",
+  "checked": true,
+  "userID": "67a3608365a39fce18e5274a"
+},
+{
+  "_id": {
+    "$oid": "67a4d51da817bebfd3056e79"
+  },
+  "text": "вивчити атаки",
+  "checked": false,
+  "userID": "67a4d50da817bebfd3056e78"
+},
+{
+  "_id": {
+    "$oid": "67a4d526a817bebfd3056e7a"
+  },
+  "text": "сходити на каву",
+  "checked": true,
+  "userID": "67a4d50da817bebfd3056e78"
+},
+{
+  "_id": {
+    "$oid": "67a4d6a9a817bebfd3056e7d"
+  },
+  "text": "вечеря",
+  "checked": false,
+  "userID": "67a377be7b959dea057b4f65"
+},
+{
+  "_id": {
+    "$oid": "67a4d6fda817bebfd3056e7e"
+  },
+  "text": "щось зробити)",
+  "checked": false,
+  "userID": "67a4d50da817bebfd3056e78"
+},
+{
+  "_id": {
+    "$oid": "67a4db9ca817bebfd3056e7f"
+  },
+  "text": "спорт",
+  "checked": false,
+  "userID": "67a3608365a39fce18e5274a"
+}]

@@ -2,10 +2,8 @@ import express from "express";
 import morgan from "morgan";
 import parser from "body-parser";
 import cookie from "cookie-parser";
-import { ErrorRequestHandler } from "express";
 
 import { router } from "./routes/super-router.js";
-import { MongoClient } from "mongodb";
 import mongoose from "mongoose";
 import { ActiveUser } from "./models/user.js";
 import errorHandler from "errorhandler";
@@ -34,16 +32,7 @@ app.set(
 // Serve static
 app.use("/media", express.static("public"));
 
-// Connect to DB
-// const client = new MongoClient(dbURI);
-// client
-//   .connect()
-//   .then(() => {
-//     client.db("admin").command({ ping: 1 });
-//   })
-//   .then(() => console.log("Successfully connected to Mongo"))
-//   .catch((err) => console.error(`Failed to connect to mongo: ${err}`))
-
+// Connect to DB and start server with mongoose
 mongoose
   .connect(dbURI)
   .then(() => {

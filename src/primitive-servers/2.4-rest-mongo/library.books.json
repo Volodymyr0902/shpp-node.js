@@ -1,0 +1,672 @@
+[{
+  "_id": {
+    "$oid": "679cee50ca87aefa0c4edfce"
+  },
+  "title": "Romeo and Juliette",
+  "author": "William Shakespeare",
+  "pages": 384,
+  "genre": [
+    "roman",
+    "classic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679ceecdca87aefa0c4edfd0"
+  },
+  "title": "American tragedy",
+  "author": "Theodor Driser",
+  "pages": 438,
+  "genre": [
+    "roman",
+    "classic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679cef7cca87aefa0c4edfd1"
+  },
+  "title": "20 000 lieus under water",
+  "author": "Jules Vern",
+  "pages": 311,
+  "genre": [
+    "adventurous",
+    "classic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679cf85a146c1c97cda77974"
+  },
+  "title": "Mein Kampf",
+  "author": "Adolf Hitler",
+  "pages": 433,
+  "genre": [
+    "bio",
+    "history"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d0de3146c1c97cda77975"
+  },
+  "title": "Notre Dame",
+  "author": "Victor Hugo",
+  "pages": 388,
+  "genre": [
+    "roman",
+    "classic"
+  ],
+  "reviews": [
+    {
+      "name": "Great one",
+      "details": "lorem..."
+    },
+    {
+      "name": "Wouln't recommend",
+      "details": "lorem ipsum..."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d2dd2146c1c97cda77976"
+  },
+  "title": "Bible",
+  "author": "unknown",
+  "pages": 894,
+  "genre": [
+    "religious"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d2e51146c1c97cda77977"
+  },
+  "title": "Ayvengo",
+  "author": "Walter Scott",
+  "pages": 211,
+  "genre": [
+    "roman"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfe0"
+  },
+  "title": "Ivanhoe",
+  "author": "Walter Scott",
+  "pages": 211,
+  "genre": [
+    "historical fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfe1"
+  },
+  "title": "Pride and Prejudice",
+  "author": "Jane Austen",
+  "pages": 279,
+  "genre": [
+    "romance"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfe2"
+  },
+  "title": "Moby-Dick",
+  "author": "Herman Melville",
+  "pages": 635,
+  "genre": [
+    "adventure"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfe3"
+  },
+  "title": "1984",
+  "author": "George Orwell",
+  "pages": 328,
+  "genre": [
+    "dystopian",
+    "political fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfe4"
+  },
+  "title": "To Kill a Mockingbird",
+  "author": "Harper Lee",
+  "pages": 281,
+  "genre": [
+    "drama"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfe5"
+  },
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "pages": 180,
+  "genre": [
+    "tragedy"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfe6"
+  },
+  "title": "War and Peace",
+  "author": "Leo Tolstoy",
+  "pages": 1225,
+  "genre": [
+    "historical fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfe7"
+  },
+  "title": "Crime and Punishment",
+  "author": "Fyodor Dostoevsky",
+  "pages": 671,
+  "genre": [
+    "psychological fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfe8"
+  },
+  "title": "The Catcher in the Rye",
+  "author": "J.D. Salinger",
+  "pages": 277,
+  "genre": [
+    "coming-of-age"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfe9"
+  },
+  "title": "Brave New World",
+  "author": "Aldous Huxley",
+  "pages": 311,
+  "genre": [
+    "dystopian"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfea"
+  },
+  "title": "Jane Eyre",
+  "author": "Charlotte Brontë",
+  "pages": 500,
+  "genre": [
+    "romance",
+    "gothic fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfeb"
+  },
+  "title": "Wuthering Heights",
+  "author": "Emily Brontë",
+  "pages": 416,
+  "genre": [
+    "gothic fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfec"
+  },
+  "title": "The Hobbit",
+  "author": "J.R.R. Tolkien",
+  "pages": 310,
+  "genre": [
+    "fantasy"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfed"
+  },
+  "title": "The Lord of the Rings",
+  "author": "J.R.R. Tolkien",
+  "pages": 1178,
+  "genre": [
+    "fantasy"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfee"
+  },
+  "title": "Dracula",
+  "author": "Bram Stoker",
+  "pages": 418,
+  "genre": [
+    "horror",
+    "gothic fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfef"
+  },
+  "title": "Frankenstein",
+  "author": "Mary Shelley",
+  "pages": 280,
+  "genre": [
+    "horror",
+    "science fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edff0"
+  },
+  "title": "The Picture of Dorian Gray",
+  "author": "Oscar Wilde",
+  "pages": 254,
+  "genre": [
+    "philosophical fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edff1"
+  },
+  "title": "Les Misérables",
+  "author": "Victor Hugo",
+  "pages": 1463,
+  "genre": [
+    "historical fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edff2"
+  },
+  "title": "The Count of Monte Cristo",
+  "author": "Alexandre Dumas",
+  "pages": 1276,
+  "genre": [
+    "adventure",
+    "historical fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edff3"
+  },
+  "title": "Don Quixote",
+  "author": "Miguel de Cervantes",
+  "pages": 863,
+  "genre": [
+    "satire",
+    "adventure"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edff4"
+  },
+  "title": "The Odyssey",
+  "author": "Homer",
+  "pages": 541,
+  "genre": [
+    "epic",
+    "adventure"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edff5"
+  },
+  "title": "The Iliad",
+  "author": "Homer",
+  "pages": 683,
+  "genre": [
+    "epic",
+    "historical fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edff6"
+  },
+  "title": "The Divine Comedy",
+  "author": "Dante Alighieri",
+  "pages": 798,
+  "genre": [
+    "epic",
+    "philosophical fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edff7"
+  },
+  "title": "The Brothers Karamazov",
+  "author": "Fyodor Dostoevsky",
+  "pages": 824,
+  "genre": [
+    "philosophical fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edff8"
+  },
+  "title": "Anna Karenina",
+  "author": "Leo Tolstoy",
+  "pages": 864,
+  "genre": [
+    "romance",
+    "drama"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edff9"
+  },
+  "title": "The Metamorphosis",
+  "author": "Franz Kafka",
+  "pages": 201,
+  "genre": [
+    "existential fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edffa"
+  },
+  "title": "Fahrenheit 451",
+  "author": "Ray Bradbury",
+  "pages": 256,
+  "genre": [
+    "dystopian",
+    "science fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edffb"
+  },
+  "title": "One Hundred Years of Solitude",
+  "author": "Gabriel García Márquez",
+  "pages": 417,
+  "genre": [
+    "magical realism"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edffc"
+  },
+  "title": "The Stranger",
+  "author": "Albert Camus",
+  "pages": 123,
+  "genre": [
+    "existential fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edffd"
+  },
+  "title": "The Old Man and the Sea",
+  "author": "Ernest Hemingway",
+  "pages": 127,
+  "genre": [
+    "adventure"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edffe"
+  },
+  "title": "Catch-22",
+  "author": "Joseph Heller",
+  "pages": 453,
+  "genre": [
+    "satire",
+    "war fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4edfff"
+  },
+  "title": "Slaughterhouse-Five",
+  "author": "Kurt Vonnegut",
+  "pages": 275,
+  "genre": [
+    "satire",
+    "science fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee000"
+  },
+  "title": "Lolita",
+  "author": "Vladimir Nabokov",
+  "pages": 336,
+  "genre": [
+    "psychological fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee001"
+  },
+  "title": "Ulysses",
+  "author": "James Joyce",
+  "pages": 730,
+  "genre": [
+    "modernist fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee002"
+  },
+  "title": "The Sun Also Rises",
+  "author": "Ernest Hemingway",
+  "pages": 251,
+  "genre": [
+    "modernist fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee003"
+  },
+  "title": "Beloved",
+  "author": "Toni Morrison",
+  "pages": 324,
+  "genre": [
+    "historical fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee004"
+  },
+  "title": "The Sound and the Fury",
+  "author": "William Faulkner",
+  "pages": 326,
+  "genre": [
+    "modernist fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee005"
+  },
+  "title": "Heart of Darkness",
+  "author": "Joseph Conrad",
+  "pages": 222,
+  "genre": [
+    "colonial fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee006"
+  },
+  "title": "A Tale of Two Cities",
+  "author": "Charles Dickens",
+  "pages": 448,
+  "genre": [
+    "historical fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee007"
+  },
+  "title": "Great Expectations",
+  "author": "Charles Dickens",
+  "pages": 505,
+  "genre": [
+    "coming-of-age"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee008"
+  },
+  "title": "David Copperfield",
+  "author": "Charles Dickens",
+  "pages": 624,
+  "genre": [
+    "autobiographical fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee009"
+  },
+  "title": "Oliver Twist",
+  "author": "Charles Dickens",
+  "pages": 554,
+  "genre": [
+    "social fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee00a"
+  },
+  "title": "Gulliver's Travels",
+  "author": "Jonathan Swift",
+  "pages": 306,
+  "genre": [
+    "satire",
+    "adventure"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee00b"
+  },
+  "title": "Robinson Crusoe",
+  "author": "Daniel Defoe",
+  "pages": 320,
+  "genre": [
+    "adventure"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee00c"
+  },
+  "title": "Treasure Island",
+  "author": "Robert Louis Stevenson",
+  "pages": 292,
+  "genre": [
+    "adventure"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee00d"
+  },
+  "title": "The Time Machine",
+  "author": "H.G. Wells",
+  "pages": 118,
+  "genre": [
+    "science fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee00e"
+  },
+  "title": "The War of the Worlds",
+  "author": "H.G. Wells",
+  "pages": 192,
+  "genre": [
+    "science fiction"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee00f"
+  },
+  "title": "Around the World in Eighty Days",
+  "author": "Jules Verne",
+  "pages": 244,
+  "genre": [
+    "adventure"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679d3062ca87aefa0c4ee010"
+  },
+  "title": "Journey to the Center of the Earth",
+  "author": "Jules Verne",
+  "pages": 183,
+  "genre": [
+    "science fiction",
+    "adventure"
+  ]
+},
+{
+  "_id": {
+    "$oid": "679e5b5786d07a7bba88b94b"
+  },
+  "title": "Notre Dame",
+  "author": "Victor Hugo",
+  "pages": 388,
+  "genre": [
+    "roman",
+    "classic"
+  ],
+  "reviews": [
+    {
+      "name": "Great one",
+      "details": "lorem..."
+    },
+    {
+      "name": "Wouln't recommend",
+      "details": "lorem ipsum..."
+    }
+  ],
+  "stock": {
+    "items": 55,
+    "price": 19.95
+  }
+}]
