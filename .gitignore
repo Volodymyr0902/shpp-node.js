@@ -58,9 +58,12 @@ Temporary Items
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
 
-/src/basics/1.2-http-web/counter/node_modules/
-/src/basics/1.2-http-web/express-playground/node_modules
-/src/basics/1.4-frontend-js/fetch-playground/server/node_modules
-/src/primitive-servers/2.2-asynchronous/node_modules
-/src/primitive-servers/2.3-http-tcp-udp/node_modules
-/src/primitive-servers/2.4-rest-mongo/node_modules
+/.idea/
+/src/1-basics/1.2-http-web/counter/node_modules/
+/src/1-basics/1.2-http-web/express-playground/node_modules/
+/src/1-basics/1.4-frontend-js/fetch-playground/server/node_modules/
+/src/2-primitive-servers/2.2-asynchronous/node_modules/
+/src/2-primitive-servers/2.3-http-tcp-udp/node_modules/
+/src/2-primitive-servers/2.4-rest-mongo/node_modules/
+/src/3-architecture/3.1-TS-advanced/node_modules/
+/src/4-prof-backend/nest-rest/node_modules/

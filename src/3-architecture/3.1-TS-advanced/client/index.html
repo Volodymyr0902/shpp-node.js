@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon</title>
+  <style>
+    .wrapper {
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center
+    }
+
+    .plus-wrap, .minus-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 2em
+    }
+
+    button {
+      width: 7em;
+      height: 5em;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="plus-wrap">
+      <h3>Clicked: <span>0</span></h3>
+      <button>+</button>
+    </div>
+    <div class="minus-wrap">
+      <h3>Clicked: <span>0</span></h3>
+      <button>-</button>
+    </div>
+  </div>
+  <script src="../dist/client/client-hackathon.js"></script>
+</body>
+</html>
