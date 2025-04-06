@@ -1,15 +1,13 @@
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
-type productStored = CreateProductDto & {
-    id: number;
-};
+import { Product, ProductDocument } from './schemas/product.schema';
+import { Model, ObjectId } from 'mongoose';
 export declare class ProductsService {
-    private products;
-    private id;
-    getAll(): productStored[];
-    getById(id: string): productStored | undefined;
-    create(createProductDto: CreateProductDto): CreateProductDto;
-    remove(id: string): "Deleted" | "Product not found";
-    update(id: string, updatedProductDto: UpdateProductDto): "Product not found" | "Product updated";
+    private productModel;
+    constructor(productModel: Model<ProductDocument>);
+    getAll(): Promise<Product[]>;
+    getById(id: string): Promise<Product | null>;
+    create(createProductDto: CreateProductDto): Promise<Product>;
+    remove(id: ObjectId): Promise<Product | null>;
+    update(id: string, updatedProductDto: UpdateProductDto): Promise<Product | null>;
 }
-export {};

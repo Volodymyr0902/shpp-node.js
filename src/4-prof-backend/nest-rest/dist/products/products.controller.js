@@ -17,6 +17,12 @@ const common_1 = require("@nestjs/common");
 const create_product_dto_1 = require("./dto/create-product.dto");
 const update_product_dto_1 = require("./dto/update-product.dto");
 const products_service_1 = require("./products.service");
+const products_filter_1 = require("./exception-filters/products.filter");
+const mongoose_1 = require("@nestjs/mongoose");
+const create_product_pipe_1 = require("./pipes/create-product/create-product.pipe");
+const products_guard_1 = require("./guards/products.guard");
+const products_roles_decorator_1 = require("./decorators/products-roles.decorator");
+const products_interceptor_1 = require("./interceptors/products.interceptor");
 let ProductsController = class ProductsController {
     productsService;
     constructor(productsService) {
@@ -25,7 +31,7 @@ let ProductsController = class ProductsController {
     getAll() {
         return this.productsService.getAll();
     }
-    getById(id) {
+    async getById(id) {
         return this.productsService.getById(id);
     }
     create(productNew) {
@@ -43,41 +49,46 @@ __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], ProductsController.prototype, "getAll", null);
 __decorate([
     (0, common_1.Get)(':id'),
+    (0, common_1.UseFilters)(new products_filter_1.ProductsFilter()),
     __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], ProductsController.prototype, "getById", null);
 __decorate([
     (0, common_1.Post)(),
     (0, common_1.HttpCode)(common_1.HttpStatus.ACCEPTED),
     (0, common_1.Header)('x-header', 'super-header'),
-    __param(0, (0, common_1.Body)()),
+    (0, common_1.UsePipes)(new common_1.ValidationPipe()),
+    __param(0, (0, common_1.Body)(create_product_pipe_1.CreateProductPipe)),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_product_dto_1.CreateProductDto]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], ProductsController.prototype, "create", null);
 __decorate([
     (0, common_1.Delete)(':id'),
-    __param(0, (0, common_1.Param)('id')),
+    __param(0, (0, common_1.Param)('id', mongoose_1.ParseObjectIdPipe)),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
 ], ProductsController.prototype, "remove", null);
 __decorate([
     (0, common_1.Put)(':id'),
+    (0, products_roles_decorator_1.Roles)(["admin"]),
     __param(0, (0, common_1.Body)()),
     __param(1, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [update_product_dto_1.UpdateProductDto, String]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], ProductsController.prototype, "update", null);
 exports.ProductsController = ProductsController = __decorate([
     (0, common_1.Controller)('products'),
+    (0, common_1.UseInterceptors)(products_interceptor_1.ProductsInterceptor),
+    (0, common_1.UseGuards)(products_guard_1.ProductsGuard),
     __metadata("design:paramtypes", [products_service_1.ProductsService])
 ], ProductsController);
 //# sourceMappingURL=products.controller.js.map

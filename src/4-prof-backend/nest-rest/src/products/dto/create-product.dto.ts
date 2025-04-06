@@ -1,4 +1,8 @@
+import { IsInt, IsNotEmpty } from 'class-validator';
+
 export class CreateProductDto {
-  readonly name: string
-  readonly price: number
+  @IsNotEmpty()
+  readonly title: string;
+
+  readonly price: number | string;
 }

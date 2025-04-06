@@ -17,7 +17,10 @@ let AppModule = class AppModule {
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [products_module_1.ProductsModule, mongoose_1.MongooseModule.forRoot("mongodb+srv://admin:todosproject@todo.i2ft2.mongodb.net/nest-rest")],
+        imports: [
+            products_module_1.ProductsModule,
+            mongoose_1.MongooseModule.forRoot('mongodb+srv://admin:todosproject@todo.i2ft2.mongodb.net/nest-rest')
+        ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })

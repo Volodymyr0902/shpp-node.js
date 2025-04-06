@@ -1,53 +1,39 @@
 import { Injectable } from '@nestjs/common';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
-
-type productStored = CreateProductDto & {id: number}
+import { InjectModel } from '@nestjs/mongoose';
+import { Product, ProductDocument } from './schemas/product.schema';
+import { Model, ObjectId } from 'mongoose';
 
 @Injectable()
 export class ProductsService {
-  private products: productStored[] = []
-  private id = 0
+  constructor(
+    @InjectModel(Product.name) private productModel: Model<ProductDocument>,
+  ) {}
 
-  getAll() {
-    return this.products;
+  async getAll(): Promise<Product[]> {
+    return this.productModel.find().exec();
   }
 
-  getById(id: string) {
-    return this.products.find((prodId) => +id === prodId.id);
+  async getById(id: string): Promise<Product | null> {
+    return this.productModel.findById(id).exec();
   }
 
-  create(createProductDto: CreateProductDto) {
-    this.products.push({
-      ...createProductDto,
-      id: this.id++,
-    })
-    return createProductDto
+  async create(createProductDto: CreateProductDto): Promise<Product> {
+    const newProduct = new this.productModel(createProductDto);
+    return newProduct.save();
   }
 
-  remove(id: string) {
-    const filtered = this.products.filter((prodId) => +id !== prodId.id);
-
-    if (this.products.length > filtered.length ) {
-      this.products = filtered
-      return "Deleted"
-    }
-
-    return "Product not found"
+  async remove(id: ObjectId): Promise<Product | null> {
+    return this.productModel.findByIdAndDelete(id).exec();
   }
 
-  update(id: string, updatedProductDto: UpdateProductDto) {
-    const index = this.products.findIndex((prodId) => +id === prodId.id);
-
-    if (index > -1) {
-      this.products[index] = {
-        ...updatedProductDto,
-        id: this.products[index].id,
-      }
-
-      return "Product updated"
-    }
-
-    return "Product not found"
+  async update(
+    id: string,
+    updatedProductDto: UpdateProductDto,
+  ): Promise<Product | null> {
+    return this.productModel
+      .findByIdAndUpdate(id, updatedProductDto, { new: true })
+      .exec();
   }
 }

@@ -1,7 +1,7 @@
 import { Document } from 'mongoose';
 export type ProductDocument = Product & Document;
 export declare class Product {
-    name: string;
+    title: string;
     price: number;
 }
 export declare const ProductSchema: import("mongoose").Schema<Product, import("mongoose").Model<Product, any, any, any, Document<unknown, any, Product> & Product & {

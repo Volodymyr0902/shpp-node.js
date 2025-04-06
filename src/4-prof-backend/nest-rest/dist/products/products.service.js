@@ -5,47 +5,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProductsService = void 0;
 const common_1 = require("@nestjs/common");
+const mongoose_1 = require("@nestjs/mongoose");
+const product_schema_1 = require("./schemas/product.schema");
+const mongoose_2 = require("mongoose");
 let ProductsService = class ProductsService {
-    products = [];
-    id = 0;
-    getAll() {
-        return this.products;
+    productModel;
+    constructor(productModel) {
+        this.productModel = productModel;
     }
-    getById(id) {
-        return this.products.find((prodId) => +id === prodId.id);
+    async getAll() {
+        return this.productModel.find().exec();
     }
-    create(createProductDto) {
-        this.products.push({
-            ...createProductDto,
-            id: this.id++,
-        });
-        return createProductDto;
+    async getById(id) {
+        return this.productModel.findById(id).exec();
     }
-    remove(id) {
-        const filtered = this.products.filter((prodId) => +id !== prodId.id);
-        if (this.products.length > filtered.length) {
-            this.products = filtered;
-            return "Deleted";
-        }
-        return "Product not found";
+    async create(createProductDto) {
+        const newProduct = new this.productModel(createProductDto);
+        return newProduct.save();
     }
-    update(id, updatedProductDto) {
-        const index = this.products.findIndex((prodId) => +id === prodId.id);
-        if (index > -1) {
-            this.products[index] = {
-                ...updatedProductDto,
-                id: this.products[index].id,
-            };
-            return "Product updated";
-        }
-        return "Product not found";
+    async remove(id) {
+        return this.productModel.findByIdAndDelete(id).exec();
+    }
+    async update(id, updatedProductDto) {
+        return this.productModel
+            .findByIdAndUpdate(id, updatedProductDto, { new: true })
+            .exec();
     }
 };
 exports.ProductsService = ProductsService;
 exports.ProductsService = ProductsService = __decorate([
-    (0, common_1.Injectable)()
+    (0, common_1.Injectable)(),
+    __param(0, (0, mongoose_1.InjectModel)(product_schema_1.Product.name)),
+    __metadata("design:paramtypes", [mongoose_2.Model])
 ], ProductsService);
 //# sourceMappingURL=products.service.js.map
